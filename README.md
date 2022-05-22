@@ -18,7 +18,7 @@ class custom_info(models.Model):
     _inherit = 'hr.employee' 
     i_love_gb= fields.Boolean(default=True, required=True)
 
-<record id="viewcustom_employee" model="ir.ui.view">
+```<record id="viewcustom_employee" model="ir.ui.view">
             <field name="name">viewcustom.employee</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
@@ -28,6 +28,7 @@ class custom_info(models.Model):
                 </field>
             </field>
         </record>
+        .```
 
 
 ## 2. TASK: Create 3 new Integer fields salary, tax and total_salary.
