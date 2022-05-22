@@ -10,4 +10,20 @@
                 </field>
             </field>
         </record>
+
+        <record id="viewcustom_employee1" model="ir.ui.view">
+            <field name="name">viewcustom.employee1</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="address_home_id" position="after">
+                    <field name="salary"/>
+                </field>
+            </field>
+            
+        </record>
+
+
+
+
     </odoo>
