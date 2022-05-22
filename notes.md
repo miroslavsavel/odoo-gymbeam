@@ -408,6 +408,8 @@ https://www.cybrosys.com/blog/how-create-module-odoo
 vo VS code sa da naformatovat XML tak ze kliknes pravym a das format
 
 
+
+##  Zadanie vypracujem na dockery, nakolko win from source mi nejde odo-bin a nie je uz cas na hranie sa so source v linuxe
 """"""""""""""""""https://www.odoo.com/forum/help-1/add-a-field-in-employee-module-178377
 funguje!!
 
