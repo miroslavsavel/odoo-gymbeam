@@ -19,6 +19,20 @@
 ## DONE
 ![alt text](https://i.ibb.co/mF0wymW/2.png)
 
+### solution
+#task 2
+    salary = fields.Integer(string='Salary in netto')
+    tax = fields.Integer(string='Tax')
+    # total_salary = fields.Integer(string='Salary + tax')
+    # computed fields and onchanges
+    # https://www.odoo.com/documentation/15.0/developer/howtos/rdtraining/09_compute_onchange.html
+    total_salary = fields.Float(compute='_compute_total')
+
+    @api.depends('salary', 'tax')
+    def _compute_total(self):
+        for record in self:
+            record.total_salary = record.salary + record.tax
+
 
 ## 3. TASK: Replace phone field with new field special_phone.
 - On save action of the employee record, check if the field is empty, if it is empty, set the default value of the field to “0901123456”.
