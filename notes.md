@@ -408,7 +408,6 @@ https://www.cybrosys.com/blog/how-create-module-odoo
 vo VS code sa da naformatovat XML tak ze kliknes pravym a das format
 
 
-
 ##  Zadanie vypracujem na dockery, nakolko win from source mi nejde odo-bin a nie je uz cas na hranie sa so source v linuxe
 """"""""""""""""""https://www.odoo.com/forum/help-1/add-a-field-in-employee-module-178377
 funguje!!
@@ -433,4 +432,59 @@ https://www.odoo.com/documentation/15.0/developer/howtos/rdtraining/03_newapp.ht
 chcem pridat tax za pole salary
 onchange, depends, compute...)
 
+<a href="https://ibb.co/0VKS9kb"><img src="https://i.ibb.co/mF0wymW/2.png" alt="2" border="0"></a>
 
+
+3. replace field
+https://www.odoo.com/sk_SK/forum/pomoc-1/how-to-replace-one-field-with-two-field-using-xpath-odoo10-133846
+https://stackoverflow.com/questions/45855977/field-replace-on-odoo-using-xpath
+
+<xpath expr="//field[@name='amount_total']" position="after">
+      <field name='sum_of_total'/>
+</xpath>
+
+<xpath expr="form/sheet/notebook/page/group/field[@name='amount_total']" position="replace">
+     <field name="sum_of_total"/>
+</xpath>
+
+--> will choose this path
+<field name="arch" type="xml">
+    <field name="tax" position="replace">
+        <field name="total_salary"/>
+    </field>
+</field>
+
+set the default value of the field to
+
+https://www.odoo.com/sk_SK/forum/pomoc-1/how-to-check-is-a-field-image-is-empty-and-set-a-default-image-145962
+
+special_phone = fields.Char(string="special_phone : ", required=True)
+
+    @api.model
+    def create(self, vals):
+        if not vals.get('special_phone'):
+            vals['special_phone'] = '0901123456'
+        return super(your_class, self).create(vals)
+
+special_phone = fields.Char(string="special_phone : ", required=False)
+
+your_class nemam definovanu 
+
+https://www.odoo.com/sk_SK/forum/pomoc-1/how-to-override-create-function-166022
+
+<a href="https://ibb.co/h8MDBnM"><img src="https://i.ibb.co/DKb596b/3a.png" alt="3a" border="0"></a>
+<a href="https://ibb.co/cTB3svw"><img src="https://i.ibb.co/kc7BPyJ/3b.png" alt="3b" border="0"></a>
+
+
+# 4.task
+
+http://www.numberspeaks.com/2018/05/11/import-xlsx-file-odoo-11-sales-orders/
+
+wizzard
+https://www.cybrosys.com/blog/import-xlsx-files-in-odoo-using-openpyxl
+
+nahratie prilohy xlsx a prechadzanie suboru
+http://www.numberspeaks.com/2018/05/11/import-xlsx-file-odoo-11-sales-orders/
+
+create button next to launchplan
+https://www.odoo.com/sk_SK/forum/pomoc-1/how-can-i-add-the-standard-header-with-create-button-to-my-module-30532

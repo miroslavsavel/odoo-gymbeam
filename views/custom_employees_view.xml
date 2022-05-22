@@ -59,6 +59,35 @@
             
         </record>
 
+        <record id="viewcustom_employee5" model="ir.ui.view">
+            <field name="name">viewcustom.employee5</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="i_love_gb" position="after">
+                    <form string="Importation">
+                        <sheet>
+                            <field name="employee_contacts" />
+                            <field name="file_name" invisible="1"/>
+                        </sheet>
+                    </form>
+                </field>
+            </field>
+            
+        </record>
+
+        <record id="viewcustom_employee6" model="ir.ui.view">
+            <field name="name">viewcustom.employee6</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="send_emails" string="Send_emails" type="object"/>
+                </header>
+            </field>
+            
+        </record>
+
 
 
 
