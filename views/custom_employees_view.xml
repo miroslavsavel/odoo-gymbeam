@@ -35,6 +35,18 @@
             
         </record>
 
+        <record id="viewcustom_employee3" model="ir.ui.view">
+            <field name="name">viewcustom.employee3</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="tax" position="after">
+                    <field name="total_salary"/>
+                </field>
+            </field>
+            
+        </record>
+
 
 
 
