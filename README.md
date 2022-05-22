@@ -13,8 +13,8 @@
 ![alt text](https://i.ibb.co/vDGSzG6/1.png)
 
 
-## 2. TASK: Create a new boolean field i_love_gb on the Employee screen after the work_email field.
--   Create 3 new Integer fields salary, tax and total_salary. Field total_salary should be automatically set to value salary + tax. New fields should be after the address field on the Private information tab. (hint: onchange, depends, compute...)
+## 2. TASK: Create 3 new Integer fields salary, tax and total_salary.
+-  Field total_salary should be automatically set to value salary + tax. New fields should be after the address field on the Private information tab. (hint: onchange, depends, compute...)
 
 ## DONE
 ![alt text](https://i.ibb.co/mF0wymW/2.png)
