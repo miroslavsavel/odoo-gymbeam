@@ -25,4 +25,10 @@ class custom_info(models.Model):
             record.total_salary = record.salary + record.tax
 
     #task 3
-    special_phone = fields.Char(string="special_phone : ", required=True)
+    special_phone = fields.Char(string="special_phone : ", required=False)
+
+    @api.model
+    def create(self, vals):
+        if not vals.get('special_phone'):
+            vals['special_phone'] = '0901123456'
+        return super(models.Model, self).create(vals)
