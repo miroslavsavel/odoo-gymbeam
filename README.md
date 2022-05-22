@@ -24,7 +24,6 @@
 - On save action of the employee record, check if the field is empty, if it is empty, set the default value of the field to “0901123456”.
 
 ## DONE
-![before save](https://i.ibb.co/DKb596b/3a.png)
 ![after save](https://i.ibb.co/kc7BPyJ/3b.png)
 
 
