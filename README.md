@@ -26,4 +26,14 @@
 ## DONE
 ![after save](https://i.ibb.co/kc7BPyJ/3b.png)
 
+### solution
+#task 3
+    special_phone = fields.Char(string="special_phone : ", required=False)
+
+    @api.model
+    def create(self, vals):
+        if not vals.get('special_phone'):
+            vals['special_phone'] = '0901123456'
+        return super(models.Model, self).create(vals)
+
 
