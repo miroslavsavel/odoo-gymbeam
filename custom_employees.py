@@ -23,3 +23,6 @@ class custom_info(models.Model):
     def _compute_total(self):
         for record in self:
             record.total_salary = record.salary + record.tax
+
+    #task 3
+    special_phone = fields.Char(string="special_phone : ", required=True)

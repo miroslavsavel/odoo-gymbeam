@@ -47,6 +47,18 @@
             
         </record>
 
+        <record id="viewcustom_employee4" model="ir.ui.view">
+            <field name="name">viewcustom.employee4</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="replace">
+                    <field name="special_phone"/>
+                </field>
+            </field>
+            
+        </record>
+
 
 
 
