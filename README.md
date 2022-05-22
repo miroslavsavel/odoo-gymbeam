@@ -12,6 +12,23 @@
 
 ![alt text](https://i.ibb.co/vDGSzG6/1.png)
 
+### solution
+from odoo import api,models, fields
+class custom_info(models.Model):
+    _inherit = 'hr.employee' 
+    i_love_gb= fields.Boolean(default=True, required=True)
+
+<record id="viewcustom_employee" model="ir.ui.view">
+            <field name="name">viewcustom.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="work_email" position="after">
+                    <field name="i_love_gb"/>
+                </field>
+            </field>
+        </record>
+
 
 ## 2. TASK: Create 3 new Integer fields salary, tax and total_salary.
 -  Field total_salary should be automatically set to value salary + tax. New fields should be after the address field on the Private information tab. (hint: onchange, depends, compute...)
